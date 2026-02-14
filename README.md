@@ -1,4 +1,13 @@
-# Waste Classification CNN
+# Waste Segregation Using CNNs – Group Project Report
+
+**Course:** ACPML – Waste Segregation Using CNNs
+
+## Group Members
+
+- Harivdan Shrihari Narayanshastri
+- Nagamani Yavagoni
+- Suranjan Banerjee
+
 
 A deep learning project for waste classification using Convolutional Neural Networks (CNN).
 
