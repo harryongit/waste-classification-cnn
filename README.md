@@ -15,6 +15,9 @@ A deep learning project for waste classification using Convolutional Neural Netw
 
 This project implements a CNN-based waste classifier that can automatically categorize waste items into different types. The model is trained to recognize and classify various waste materials to support waste segregation and recycling efforts.
 
+## Dataset
+https://www.kaggle.com/datasets/techsash/waste-classification-data
+
 ## Project Structure
 
 ```

@@ -12,6 +12,9 @@
 
 https://github.com/harryongit/waste-classification-cnn
 
+## Dataset
+https://www.kaggle.com/datasets/techsash/waste-classification-data
+
 ---
 
 ## Table of Contents
