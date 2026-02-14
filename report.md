@@ -1,6 +1,6 @@
 # Waste Segregation Using CNNs – Group Project Report
 
-**Course:** ACPML – Waste Segregation Using CNNs
+**Course:** ACPML – Waste Segregation Using CNNs [IITB]
 
 ## Group Members
 
