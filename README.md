@@ -8,93 +8,51 @@
 - Nagamani Yavagoni
 - Suranjan Banerjee
 
+A lightweight CNN baseline for multi‑class waste classification using a local ZIP dataset and TensorFlow/Keras.
 
-A deep learning project for waste classification using Convolutional Neural Networks (CNN).
+## Overview
 
-## Project Overview
-
-This project implements a CNN-based waste classifier that can automatically categorize waste items into different types. The model is trained to recognize and classify various waste materials to support waste segregation and recycling efforts.
+The notebook builds a simple CNN to classify images into seven classes:
+Cardboard, Glass, Paper, Plastic, Food_Waste, Metal, Other.
 
 ## Dataset
-https://www.kaggle.com/datasets/techsash/waste-classification-data
 
-## Project Structure
+- Local ZIP archive:  
+  `\Dataset_Waste_Segregation.zip`
+- Contains a single top‑level directory with subfolders per class.
+- The notebook splits training/validation with `validation_split=0.2`.
 
-```
-├── images/                          # Image data for training/testing
-├── model/
-│   └── waste_classifier_model.keras # Trained model file
-├── notebook/
-│   └── wastesegregation_iiitbproject.ipynb  # Jupyter notebook with analysis
-├── output/
-│   ├── classification_report.txt    # Model performance metrics
-│   ├── waste_classifier_architecture.json   # Model architecture details
-│   └── waste_classifier.weights.h5  # Model weights
-├── python/
-│   └── wastesegregation_iiitbproject.py    # Python implementation
-└── README.md                        # This file
-```
+No Kaggle download is required.
 
 ## Requirements
 
 - Python 3.x
-- TensorFlow/Keras
+- TensorFlow (with Keras)
 - NumPy
-- Pandas
-- Scikit-learn
-- OpenCV (for image processing)
-- Matplotlib (for visualization)
 
-## Installation
+Install minimal dependencies:
 
-1. Clone the repository:
 ```bash
-git clone https://github.com/harryongit/waste-classification-cnn.git
-cd waste-classification-cnn
+pip install tensorflow numpy
 ```
 
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+## Run the Notebook
 
-## Usage
+1. Open `CNN_Assg_Waste_Segregation_Starter.ipynb` in Jupyter or VS Code.
+2. Ensure the ZIP path is set to:
+   `\Dataset_Waste_Segregation.zip`
+3. Run all cells sequentially:
+   - Unzip and locate dataset
+   - Create training/validation datasets
+   - Build, train, and evaluate the CNN
+   - Save the model
 
-### Using the Jupyter Notebook
-```bash
-jupyter notebook notebook/wastesegregation_iiitbproject.ipynb
-```
+## Output
 
-### Using the Python Script
-```bash
-python python/wastesegregation_iiitbproject.py
-```
+- Trained model file: `waste_cnn.keras`
+- Console logs show training/validation accuracy and loss.
 
-## Model Details
+## Notes
 
-- **Architecture**: Convolutional Neural Network (CNN)
-- **Framework**: TensorFlow/Keras
-- **Input**: Waste item images
-- **Output**: Classification of waste type
-
-## Results
-
-The model's performance metrics and classification report are available in the `output/` directory:
-- Classification report: `output/classification_report.txt`
-- Model architecture: `output/waste_classifier_architecture.json`
-
-## Author
-
-Created as part of the IIIT Bangalore project.
-
-## License
-
-This project is open source and available under the MIT License.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## Contact
-
-For more information, visit: https://github.com/harryongit/waste-classification-cnn
+- Augmentation uses random flip/rotation/zoom for better generalization.
+- The pipeline relies on `image_dataset_from_directory` and `tf.data` prefetching for efficiency.
